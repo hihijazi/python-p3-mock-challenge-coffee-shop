@@ -8,6 +8,7 @@ class Coffee:
     def __init__(self, name):
         self.name = name
         
+    
     @property 
     def name(self):
         return self._name
@@ -28,7 +29,7 @@ class Coffee:
     
     def average_price(self):
         return mean([order.price for order in self.orders()])
-breakpoint()
+
 class Customer:
     all = []
 
@@ -68,7 +69,7 @@ class Customer:
                 ),
             )
         return None
-breakpoint()
+
 class Order:
     all = []
 
@@ -108,18 +109,5 @@ class Order:
             and not hasattr(self, "price")
         ):
             self._price = price
-breakpoint()
-
-c1 = Coffee("Starbucks")
-c2 = Coffee("Costa")    
-c3 = Coffee("Dunkin")  
-
-ca = Customer("Caleb")
-cb = Customer("Beth")
-cc = Customer("Carl")
-
-o1 = Order(ca, c1, 5)
-o2 = Order(cb, c1, 3)
-o3 = Order(cc, c2, 2)
-
+            
 ipdb.set_trace()
